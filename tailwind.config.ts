@@ -13,7 +13,11 @@ export default {
       },
     },
     extend: {
+      fontFamily: {
+        sans: ['Instrument Sans', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+      },
       colors: {
+        surface: "hsl(var(--surface))",
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
