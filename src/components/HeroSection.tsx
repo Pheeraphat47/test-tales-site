@@ -17,7 +17,7 @@ const HeroSection = () => {
           </h1>
 
           <p className="text-xl md:text-2xl text-muted-foreground max-w-[80ch] leading-relaxed mb-8 animate-fade-in-up font-medium" style={{ animationDelay: "0.1s" }}>
-            Final-year IT student at SIT KMUTT with <span className="text-foreground border-b-2 border-primary/30 font-semibold"> real-world QA and software testing experience at Siam Commercial Bank (SCB)</span>, skilled in manual and automation testing through real-world tasks and projects. Detail-oriented with strong problem-solving skills and good English proficiency <span className="text-foreground font-bold">(TOEIC: 780)</span>.
+            Final-year IT student at SIT KMUTT with <span className="text-foreground border-b-2 border-primary/30 font-semibold"> real-world QA and software testing experience at Siam Commercial Bank (SCB)</span>, skilled in manual and automation testing through real-world tasks and projects. Detail-oriented with strong problem-solving skills and good English proficiency <span className="text-foreground font-bold">(TOEIC 780)</span>.
           </p>
 
           <div className="flex flex-wrap gap-3 mb-10 animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
