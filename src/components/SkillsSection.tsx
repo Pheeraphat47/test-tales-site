@@ -1,66 +1,69 @@
-import { ClipboardCheck, Bot, Globe, Wrench, Code } from "lucide-react";
+import { Bot, Rocket, GraduationCap, Github, Trophy, Languages } from "lucide-react";
+import { Badge } from "@/components/ui/badge";
 
-const skillGroups = [
-  {
-    icon: ClipboardCheck,
-    title: "Manual Testing",
-    skills: ["Test Case Design", "Test Execution", "Bug Reporting", "Regression Testing"],
-  },
-  {
-    icon: Bot,
-    title: "Automation Testing",
-    skills: ["Robot Framework", "Selenium", "Test Script Development", "CI/CD Integration"],
-  },
-  {
-    icon: Globe,
-    title: "API Testing",
-    skills: ["Postman", "RequestsLibrary", "REST API Validation", "Response Verification"],
-  },
-  {
-    icon: Wrench,
-    title: "Tools",
-    skills: ["Git & GitHub", "Jira", "TestRail", "VS Code"],
-  },
-  {
-    icon: Code,
-    title: "Programming",
-    skills: ["Python", "Java (Basic)", "SQL", "HTML/CSS"],
-  },
-];
-
-const SkillsSection = () => {
+const HighlightsSection = () => {
   return (
-    <section id="skills" className="py-24 bg-surface">
+    <section id="highlights" className="py-24 bg-surface">
       <div className="max-w-7xl mx-auto px-6">
-        <p className="text-xs font-bold uppercase tracking-[0.2em] text-muted-foreground mb-4">Skills & Tools</p>
-        <h2 className="text-3xl md:text-4xl font-semibold tracking-tight mb-12">
-          Technical toolkit
+        <h2 className="text-4xl md:text-5xl font-bold tracking-tight mb-16">
+          Highlights
         </h2>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {skillGroups.map((group) => (
-            <div
-              key={group.title}
-              className="bg-background rounded-lg p-6 border border-border hover:border-primary/30 hover:shadow-sm transition-all"
-            >
-              <div className="size-10 rounded-lg bg-primary/10 flex items-center justify-center text-primary mb-4">
-                <group.icon size={20} />
-              </div>
-              <h3 className="font-semibold mb-3">{group.title}</h3>
-              <ul className="space-y-2">
-                {group.skills.map((skill) => (
-                  <li key={skill} className="text-sm text-muted-foreground flex items-center gap-2">
-                    <span className="size-1 rounded-full bg-primary/40" />
-                    {skill}
-                  </li>
-                ))}
-              </ul>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+          {/* Card 1: SCB Experience */}
+          <div className="bg-background rounded-2xl p-8 border border-border shadow-sm hover:shadow-md transition-all flex flex-col items-start h-full">
+            <div className="size-14 rounded-2xl bg-primary/10 flex items-center justify-center text-primary mb-6">
+              <Bot size={28} />
             </div>
-          ))}
+            <Badge variant="accent" className="mb-4 uppercase text-[10px] tracking-widest px-2 py-0.5">Professional</Badge>
+            <h3 className="text-2xl font-bold mb-4">SCB Technology Hub</h3>
+            <p className="text-muted-foreground text-lg leading-relaxed mb-6 flex-grow">
+              Developing Python-based tools and Robot Framework scripts to validate banking systems within the KMUTT-SCB collaborative innovation space.
+            </p>
+            <div className="flex flex-wrap gap-2 mt-auto">
+              {["Python", "Robot Framework", "API"].map(t => (
+                <span key={t} className="text-xs font-semibold px-2 py-1 rounded-md bg-muted border border-border">{t}</span>
+              ))}
+            </div>
+          </div>
+
+          {/* Card 2: TOEIC / Languages */}
+          <div className="bg-background rounded-2xl p-8 border border-border shadow-sm hover:shadow-md transition-all flex flex-col items-start h-full">
+            <div className="size-14 rounded-2xl bg-primary/10 flex items-center justify-center text-primary mb-6">
+              <Trophy size={28} />
+            </div>
+            <Badge variant="secondary" className="mb-4 uppercase text-[10px] tracking-widest px-2 py-0.5">Certification</Badge>
+            <h3 className="text-2xl font-bold mb-4">780 TOEIC Score</h3>
+            <p className="text-muted-foreground text-lg leading-relaxed mb-6 flex-grow">
+              Demonstrated proficiency in professional English, enabling effective collaboration in international tech environments.
+            </p>
+            <div className="flex items-center gap-2 mt-auto text-primary font-bold">
+              <Languages size={18} />
+              <span>Professional English</span>
+            </div>
+          </div>
+
+          {/* Card 3: Capstone Project */}
+          <div className="bg-background rounded-2xl p-8 border border-border shadow-sm hover:shadow-md transition-all flex flex-col items-start h-full">
+            <div className="size-14 rounded-2xl bg-primary/10 flex items-center justify-center text-primary mb-6">
+              <Rocket size={28} />
+            </div>
+            <Badge variant="default" className="mb-4 uppercase text-[10px] tracking-widest px-2 py-0.5">Academic Project</Badge>
+            <h3 className="text-2xl font-bold mb-4">Yakteaw AI Travel</h3>
+            <p className="text-muted-foreground text-lg leading-relaxed mb-6 flex-grow">
+              Leading QA &amp; DevOps for an AI platform, implementing full-suite manual and automated UI testing strategies.
+            </p>
+            <div className="flex flex-wrap gap-2 mt-auto">
+              {["QA Lead", "PM", "DevOps"].map(t => (
+                <span key={t} className="text-xs font-semibold px-2 py-1 rounded-md bg-muted border border-border">{t}</span>
+              ))}
+            </div>
+          </div>
         </div>
       </div>
     </section>
   );
 };
 
-export default SkillsSection;
+export default HighlightsSection;

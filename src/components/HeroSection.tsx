@@ -1,38 +1,38 @@
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { ArrowDown, Download } from "lucide-react";
+import { ArrowDown } from "lucide-react";
 
 const HeroSection = () => {
   return (
     <section className="min-h-screen flex items-center pt-16">
       <div className="max-w-7xl mx-auto px-6 w-full">
-        <div className="max-w-[800px]">
-          <Badge variant="accent" className="mb-6 animate-fade-in">
-            <span className="size-2 rounded-full bg-primary animate-pulse mr-2" />
-            Open to Work — QA Engineer
+        <div className="max-w-[900px]">
+          <Badge variant="accent" className="mb-6 animate-fade-in text-lg py-1.5 px-4 font-medium uppercase tracking-wider">
+            <span className="size-2 rounded-full bg-background animate-pulse mr-2" />
+            OPEN FOR OPPORTUNITIES — QA ENGINEER / SOFTWARE TESTER
           </Badge>
 
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-semibold tracking-tight leading-[0.95] mb-8 animate-fade-in-up text-balance">
-            Crafting software{" "}
-            <span className="text-primary italic font-normal">quality</span>{" "}
-            with precision.
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight leading-[1.1] mb-6 animate-fade-in-up text-balance">
+            Pheeraphat Dhirachaisuphakij<br />
           </h1>
 
-          <p className="text-lg md:text-xl text-muted-foreground max-w-[50ch] leading-relaxed mb-10 animate-fade-in-up" style={{ animationDelay: "0.1s" }}>
-            Final-year IT student passionate about software quality, manual & automation testing, and improving user experience through rigorous QA practices.
+          <p className="text-xl md:text-2xl text-muted-foreground max-w-[80ch] leading-relaxed mb-8 animate-fade-in-up font-medium" style={{ animationDelay: "0.1s" }}>
+            Final-year IT student at SIT KMUTT with <span className="text-foreground border-b-2 border-primary/30 font-semibold"> real-world QA and software testing experience at Siam Commercial Bank (SCB)</span>, skilled in manual and automation testing through real-world tasks and projects. Detail-oriented with strong problem-solving skills and good English proficiency <span className="text-foreground font-bold">(TOEIC: 780)</span>.
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
-            <Button variant="hero" size="lg" asChild>
+          <div className="flex flex-wrap gap-3 mb-10 animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
+            {["Python", "Robot Framework", "Selenium","Postman","SQL","Docker"].map((tag) => (
+              <Badge key={tag} variant="secondary" className="text-base py-1.5 px-5 border border-primary/20 bg-primary/10 text-primary hover:bg-primary/20 transition-colors font-bold">
+                {tag}
+              </Badge>
+            ))}
+          </div>
+
+          <div className="flex flex-col sm:flex-row gap-4 animate-fade-in-up" style={{ animationDelay: "0.3s" }}>
+            <Button variant="hero" size="lg" className="text-xl h-14 px-10" asChild>
               <a href="#projects">
-                <ArrowDown size={16} />
-                View Projects
-              </a>
-            </Button>
-            <Button variant="heroOutline" size="lg" asChild>
-              <a href="#resume">
-                <Download size={16} />
-                Download Resume
+                <ArrowDown size={22} className="mr-2" />
+                View Featured Work
               </a>
             </Button>
           </div>
