@@ -17,13 +17,10 @@ const AboutSection = () => {
               A dedicated QA engineer building high-quality software.
             </h2>
             <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-              I'm a 4th-year IT student at King Mongkut's University of Technology Thonburi (KMUTT), expected to graduate in May 2026. I have a strong passion for quality assurance and software testing. I believe that great software starts with thorough testing — from writing precise test cases to automating repetitive workflows.
-            </p>
-            <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-              My professional journey includes hands-on experience in manual and automation testing within the banking sector, specifically at the <span className="text-foreground font-semibold">SCB Technology Hub</span> — a premier collaborative workspace between KMUTT and SCB. I am experienced in developing automation scripts using Python and Robot Framework, and I thrive in mentor-led environments that prioritize high-quality delivery.
+              4th-year IT student at SIT KMUTT (Graduating May 2026) with a passion for quality-first software delivery. I specialize in manual and automation testing, gained through hands-on experience at the <span className="text-foreground font-semibold">SCB Technology Hub</span>.
             </p>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              Comfortable working in Thai–English bilingual environments, with a <span className="text-foreground font-semibold">TOEIC score of 780</span> demonstrating professional English proficiency for effective communication in international tech teams.
+              Experienced in developing robust automation scripts with Python and Robot Framework. A bilingual communicator with a <span className="text-foreground font-semibold">TOEIC score of 780</span>, ready to contribute effectively to international tech teams.
             </p>
           </div>
           <div className="space-y-6 md:mt-4">

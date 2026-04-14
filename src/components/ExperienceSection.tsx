@@ -3,12 +3,11 @@ const experiences = [
     period: "Sep 2025 — Mar 2026",
     title: "QA Automation Engineer Intern (SCB Technology Hub)",
     company: "Siam Commercial Bank Public Company Limited",
-    description: "Participated in the SCB Technology Hub, a strategic collaboration between SCB and KMUTT, focused on developing next-generation tech talent through real-world banking projects.",
+    description: "Collaborated in the SCB Technology Hub to develop next-generation banking solutions.",
     responsibilities: [
-      "Selected to work within the SCB Technology Hub at KMUTT, a dedicated space for hands-on learning and professional practice under the close supervision of SCB's technology experts.",
-      "Developed Python-based automation tools to validate API responses (XML/JSON) against system specifications.",
-      "Contributed to the development and improvement of test automation scripts using Robot Framework.",
-      "Collaborated with senior QA engineers to design and execute comprehensive test scenarios, ensuring system functionality met strict business requirements."
+      "Automated API validation (XML/JSON) using Python to ensure system integrity.",
+      "Developed and optimized test scripts with Robot Framework.",
+      "Designed test scenarios and collaborated with experts to meet business requirements."
     ],
     active: true,
   },
@@ -16,11 +15,11 @@ const experiences = [
     period: "Jan 2025 — May 2025",
     title: "Product Owner Cooperative Intern",
     company: "Innovasive Company Limited",
-    description: "Facilitated clear communication between stakeholders and development teams.",
+    description: "Bridged the gap between stakeholders and development teams.",
     responsibilities: [
-      "Assisted in gathering, analyzing, and documenting business requirements from stakeholders.",
-      "Translated requirements into structured functional specifications, user stories with acceptance criteria, and process flow diagrams.",
-      "Collaborated with developers and QA teams to clarify acceptance criteria and reduce requirement ambiguity."
+      "Analyzed business requirements and documented functional specifications.",
+      "Created structured user stories, acceptance criteria, and process flows.",
+      "Aided Dev/QA teams in reducing requirement ambiguity and clarifying goals."
     ],
     active: false,
   },
@@ -28,11 +27,11 @@ const experiences = [
     period: "Jun 2024 — Jul 2024",
     title: "UX Researcher Intern",
     company: "Adirek&Co Company Limited",
-    description: "Conducted usability testing and analysis to improve product usability.",
+    description: "Improved product usability through data-driven user research.",
     responsibilities: [
-      "Conducted usability testing and analyzed user behavior data.",
-      "Identified key improvement areas for product usability.",
-      "Delivered actionable insights that supported data-driven product decisions and enhanced user experience."
+      "Conducted usability testing and analyzed user behavior patterns.",
+      "Identified and addressed key improvement areas for product usability.",
+      "Delivered actionable insights to enhance overall user experience."
     ],
     active: false,
   },
@@ -40,11 +39,10 @@ const experiences = [
     period: "Jun 2023 — Jul 2023",
     title: "Frontend Developer Intern",
     company: "Innovasive Company Limited",
-    description: "Developed and maintained responsive web applications.",
+    description: "Built and maintained responsive web applications.",
     responsibilities: [
-      "Developed and maintained responsive web applications using Next.js and Tailwind CSS.",
-      "Collaborated with backend developers to troubleshoot API responses.",
-      "Debugged UI defects and improved overall system integration."
+      "Developed modern web interfaces using Next.js and Tailwind CSS.",
+      "Collaborated on API troubleshooting and UI/UX improvements."
     ],
     active: false,
   },

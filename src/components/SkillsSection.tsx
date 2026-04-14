@@ -1,5 +1,14 @@
-import { Bot, Rocket, GraduationCap, Github, Trophy, Languages } from "lucide-react";
+import { Bot, Rocket, GraduationCap, Github, Trophy, Languages, ExternalLink, Eye } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog";
+import toeicCertificate from "@/assets/certificates/TOEIC_Score_Pheeraphat.pdf";
 
 const HighlightsSection = () => {
   return (
@@ -35,9 +44,39 @@ const HighlightsSection = () => {
             </div>
             <Badge variant="secondary" className="mb-4 uppercase text-[10px] tracking-widest px-2 py-0.5">Certification</Badge>
             <h3 className="text-2xl font-bold mb-4">780 TOEIC Score</h3>
-            <p className="text-muted-foreground text-lg leading-relaxed mb-6 flex-grow">
+            <p className="text-muted-foreground text-lg leading-relaxed mb-6">
               Demonstrated proficiency in professional English, enabling effective collaboration in international tech environments.
             </p>
+            
+            <Dialog>
+              <DialogTrigger asChild>
+                <Button variant="outline" size="sm" className="mb-6 w-full group">
+                  <Eye size={16} className="mr-2 group-hover:text-primary transition-colors" />
+                  Preview Certificate
+                </Button>
+              </DialogTrigger>
+              <DialogContent className="max-w-4xl h-[90vh] p-0 overflow-hidden flex flex-col">
+                <DialogHeader className="p-4 border-b">
+                  <DialogTitle className="flex items-center justify-between">
+                    <span>TOEIC Score Report - Pheeraphat Dhirachaisuphakij</span>
+                    <Button variant="ghost" size="sm" asChild className="mr-6">
+                      <a href={toeicCertificate} target="_blank" rel="noopener noreferrer">
+                        <ExternalLink size={14} className="mr-2" />
+                        Open in New Tab
+                      </a>
+                    </Button>
+                  </DialogTitle>
+                </DialogHeader>
+                <div className="flex-grow w-full bg-muted">
+                  <iframe 
+                    src={`${toeicCertificate}#toolbar=0`} 
+                    className="w-full h-full border-none"
+                    title="TOEIC Certificate Preview"
+                  />
+                </div>
+              </DialogContent>
+            </Dialog>
+
             <div className="flex items-center gap-2 mt-auto text-primary font-bold">
               <Languages size={18} />
               <span>Professional English</span>

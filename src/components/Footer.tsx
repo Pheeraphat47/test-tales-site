@@ -6,9 +6,9 @@ const Footer = () => {
   };
 
   const socialLinks = [
-    { icon: Github, href: "https://github.com/pheeraphat-dhi", label: "GitHub" },
+    { icon: Github, href: "https://github.com/Pheeraphat47", label: "GitHub" },
     { icon: Linkedin, href: "https://linkedin.com/in/pheeraphat-dhirachaisuphakij/", label: "LinkedIn" },
-    { icon: PenTool, href: "https://medium.com/@pheeraphat", label: "Medium" },
+    { icon: PenTool, href: "https://medium.com/@dpheeraphat2547", label: "Medium" },
     { icon: Mail, href: "mailto:pheeraphat.dhi@gmail.com", label: "Email" },
   ];
 
@@ -27,7 +27,7 @@ const Footer = () => {
         <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-10 mb-10">
           <div className="max-w-md">
             <a href="#" className="text-2xl font-bold tracking-tight uppercase mb-2 block">
-              Portfolio
+              Pheeraphat
             </a>
             <p className="text-muted-foreground text-base leading-relaxed">
               Software Quality Assurance Engineer focused on automation and delivering high-quality software solutions.
