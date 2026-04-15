@@ -13,9 +13,22 @@ import {
 import capstone1 from "@/assets/projects/Capstone/Capstone_1.png";
 import capstone2 from "@/assets/projects/Capstone/Capstone_2.png";
 import integrated1 from "@/assets/projects/Integrated/Integrated_1.png";
+import integrated2 from "@/assets/projects/Integrated/Integrated_2.png";
+import integrated3 from "@/assets/projects/Integrated/Integrated_3.png";
 import udemy1 from "@/assets/projects/Udemycourse_Project/UdemyProject_1.png";
 import udemy2 from "@/assets/projects/Udemycourse_Project/UdemyProject_2.png";
 import udemy3 from "@/assets/projects/Udemycourse_Project/UdemyProject_3.png";
+import udemycert from "@/assets/projects/Udemycourse_Project/Udemy_RobotFramework_course.jpg";
+
+// -- Test evidence images --
+import capstoneManualTestCase from "@/assets/projects/Capstone/Capstone_ManualTestCase.png";
+import capstoneAutomateTestCase1 from "@/assets/projects/Capstone/Capstone_AutomateTestCase1.png";
+import capstoneAutomateTestCase2 from "@/assets/projects/Capstone/CapstoneAutomateTestCase2.png";
+import integratedTestManual from "@/assets/projects/Integrated/TestCase_Manual.png";
+import integratedTestCypress from "@/assets/projects/Integrated/TestCase_Cypress.png";
+import integratedTestPostman from "@/assets/projects/Integrated/TestCase_Postman.png";
+import robotExAPITest from "@/assets/projects/Udemycourse_Project/RobotEx_APITest.png";
+import robotExUITest from "@/assets/projects/Udemycourse_Project/RobotEx_UITest.png";
 
 // -- Activity images --
 import samosit1 from "@/assets/activities/SamoSIT/SamoSIT_1.png";
@@ -30,6 +43,12 @@ import starterpack1 from "@/assets/activities/Starterpack/Starterpack_1.png";
 import starterpack2 from "@/assets/activities/Starterpack/Starterpack_2.png";
 import starterpack3 from "@/assets/activities/Starterpack/Starterpack_3.png";
 
+interface TestEvidence {
+  title: string;
+  image: string;
+  description: string;
+}
+
 interface ProjectItem {
   name: string;
   type: "Project" | "Activity";
@@ -41,20 +60,21 @@ interface ProjectItem {
   tools: string[];
   techStack?: { category: string; items: string[] }[];
   contributions: string[];
+  testEvidence?: TestEvidence[];
 }
 
 const projects: ProjectItem[] = [
   {
-    name: "Yakteaw (Capstone Project)",
+    name: "Yakteaw AI Travel Planning Platform (Capstone Project)",
     type: "Project",
-    period: "Aug 2025 - Present",
-    role: "Project Manager, QA Lead & DevOps",
+    period: "Aug 2025 - Apr 2026",
+    role: "Frontend Developer, QA Engineer/Software Tester & DevOps",
     images: [capstone1, capstone2],
-    description: "An AI-powered travel recommendation platform built as a capstone project.",
+    description: "An AI-powered travel recommendation platform that allows users to create personalized trips based on their preferences. Users can generate trips using AI by specifying interests and references, then manage their itineraries with features such as editing and deleting. The platform also supports social interactions, enabling users to like, save, and share trips, as well as explore travel plans created by other users",
     tested: ["Manual & Regression Testing", "UI Automation", "API Validation"],
     tools: ["Robot Framework", "Selenium", "Postman", "Python"],
     techStack: [
-      { category: "Testing", items: ["Robot Framework", "Selenium", "Requests Library", "Python"] },
+      { category: "Testing", items: ["Robot Framework", "Selenium", "Python"] },
       { category: "Frontend", items: ["Nuxt", "Tailwind CSS"] },
       { category: "Backend", items: ["Go"] },
       { category: "Database", items: ["MySQL"] },
@@ -66,14 +86,31 @@ const projects: ProjectItem[] = [
       "Developed automated test scripts using Robot Framework with Selenium for UI validation.",
       "Conducted API testing using Postman, validating JSON responses and ensuring integration accuracy."
     ],
+    testEvidence: [
+      {
+        title: "Manual Test Case",
+        image: capstoneManualTestCase,
+        description: "Comprehensive manual test cases designed to verify all core functionalities of the platform, covering both positive and negative scenarios.",
+      },
+      {
+        title: "Automated Test Case — Robot Framework & Selenium",
+        image: capstoneAutomateTestCase1,
+        description: "UI automation test scripts built with Robot Framework and Selenium Library, automating key user flows such as login/register validation, Search Trip , Create Trip , Like/Saved/Shared Trip etc.",
+      },
+      {
+        title: "Automated Test Case — Postman (API Testing)",
+        image: capstoneAutomateTestCase2,
+        description: "API test collection created in Postman to validate REST endpoints, verifying JSON response structures, status codes, and data integrity.",
+      },
+    ],
   },
   {
-    name: "IT Bangmod Kradan Kanban (Integrated Project)",
+    name: "Kradan Kanban Board Management (Integrated Project)",
     type: "Project",
-    period: "Jan - May 2025",
-    role: "Full-stack Developer & QA",
-    images: [integrated1],
-    description: "A Kanban board application developed as an integrated project for task and workflow management.",
+    period: "Aug - Dec 2024",
+    role: "Full-stack Developer",
+    images: [integrated1, integrated2, integrated3],
+    description: "A Kanban board system designed to organize and manage tasks through visual workflow management. Users can create multiple boards, set visibility (public/private), and collaborate with others by inviting them to join a board. Within each board, tasks are represented as cards and organized into status columns such as To Do, Doing, and Done, allowing users to track progress and update task status easily.",
     tested: ["Manual Testing", "Integration Testing", "UI Automation"],
     tools: ["Vue.js", "Java Spring Boot", "Tailwind CSS", "Postman", "Cypress"],
     techStack: [
@@ -84,19 +121,36 @@ const projects: ProjectItem[] = [
       { category: "Infra", items: ["Docker"] },
     ],
     contributions: [
-      "Developed a full-stack Kanban board application for task and workflow management.",
+      "Developed a full-stack Kanban board application for task management.",
       "Built the frontend using Vue.js and Tailwind CSS for a modern, responsive UI.",
       "Implemented backend services with Java Spring Boot and MySQL database.",
-      "Conducted thorough testing including manual, API validation with Postman, and UI automation with Cypress."
+      "Passed all test cases from Lecturer including manual, API validation with Postman, and UI automation with Cypress."
+    ],
+    testEvidence: [
+      {
+        title: "Manual Test Case (UAT)",
+        image: integratedTestManual,
+        description: "Manual test cases prepared by the lecturer for User Acceptance Testing (UAT). Our team developed the web application to pass all specified UAT scenarios.",
+      },
+      {
+        title: "Automated Frontend Test — Cypress",
+        image: integratedTestCypress,
+        description: "Automated frontend test suite written in Cypress by the lecturer. These E2E tests validated the UI behavior, form interactions, and navigation flows of the Kanban board.",
+      },
+      {
+        title: "Automated Backend Test — Postman",
+        image: integratedTestPostman,
+        description: "Postman API test collection used to validate all backend endpoints, ensuring correct CRUD operations, authentication, and error handling across the board management API.",
+      },
     ],
   },
   {
     name: "Robot Framework with Python - Selenium/API Automation Testing Project",
     type: "Project",
-    period: "2024 - 2025",
-    role: "Automation Test Engineer",
-    images: [udemy1, udemy2, udemy3],
-    description: "An automation testing project utilizing Robot Framework with Selenium for E2E testing and Requests Library for API testing.",
+    period: "Apr 2026",
+    role: "Learner - QA Automation Engineer",
+    images: [udemy2, udemy3, udemy1, udemycert],
+    description: "An automation testing project utilizing Robot Framework with Selenium for E2E testing and Requests Library for API testing, This project is my learning in Udemy Course.",
     tested: ["E2E Testing", "API Testing", "Automation Testing"],
     tools: ["Robot Framework", "Selenium", "Requests Library", "Python"],
     techStack: [
@@ -107,6 +161,18 @@ const projects: ProjectItem[] = [
       "Developed automated E2E test scripts using Robot Framework with Selenium.",
       "Created API test suites using Requests Library for REST API validation.",
       "Implemented test automation best practices and maintainable test architecture.",
+    ],
+    testEvidence: [
+      {
+        title: "UI / E2E Testing — Robot Framework & Selenium",
+        image: robotExUITest,
+        description: "End-to-end UI test scripts developed with Robot Framework and Selenium, covering login flow validation, e-commerce web interactions, form submissions, and page navigation testing.",
+      },
+      {
+        title: "API Testing — Robot Framework & Requests Library",
+        image: robotExAPITest,
+        description: "API test suites built with Robot Framework's Requests Library, performing REST API validation including GET/POST/PUT/DELETE operations, response status verification, and JSON body assertions.",
+      },
     ],
   },
 ];
@@ -458,6 +524,41 @@ const ProjectsSection = () => {
                       ))}
                     </ul>
                   </div>
+
+                  {/* Test Evidence Section */}
+                  {selectedProject.testEvidence && selectedProject.testEvidence.length > 0 && (
+                    <div>
+                      <h4 className="text-base font-bold uppercase tracking-wider text-muted-foreground mb-6">Test Evidence</h4>
+                      <div className="space-y-8">
+                        {selectedProject.testEvidence.map((evidence, idx) => (
+                          <div key={idx} className="rounded-xl border border-border overflow-hidden bg-muted/30">
+                            <div className="relative group/evidence">
+                              <img
+                                src={evidence.image}
+                                alt={evidence.title}
+                                className="w-full h-auto object-contain bg-black/5 cursor-pointer transition-transform duration-300"
+                                onClick={(e) => {
+                                  const img = e.currentTarget;
+                                  if (!document.fullscreenElement) {
+                                    img.requestFullscreen?.();
+                                  } else {
+                                    document.exitFullscreen?.();
+                                  }
+                                }}
+                              />
+                              <div className="absolute bottom-3 right-3 bg-black/50 text-white text-xs px-2.5 py-1 rounded-md opacity-0 group-hover/evidence:opacity-100 transition-opacity duration-200 backdrop-blur-sm">
+                                Click to fullscreen
+                              </div>
+                            </div>
+                            <div className="p-4 sm:p-5">
+                              <h5 className="text-sm sm:text-base font-bold text-foreground mb-1.5">{evidence.title}</h5>
+                              <p className="text-sm text-muted-foreground leading-relaxed">{evidence.description}</p>
+                            </div>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  )}
                 </div>
               </div>
             </>

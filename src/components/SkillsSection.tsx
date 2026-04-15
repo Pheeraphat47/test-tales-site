@@ -25,13 +25,14 @@ const HighlightsSection = () => {
             <div className="size-14 rounded-2xl bg-primary/10 flex items-center justify-center text-primary mb-6">
               <Bot size={28} />
             </div>
-            <Badge variant="accent" className="mb-4 uppercase text-[10px] tracking-widest px-2 py-0.5">Professional</Badge>
-            <h3 className="text-2xl font-bold mb-4">SCB Technology Hub</h3>
+            <Badge variant="accent" className="mb-4 uppercase text-[10px] tracking-widest px-2 py-0.5">Internship</Badge>
+            <h3 className="text-2xl font-bold mb-4">QA Automation Engineer Intern</h3>
+            <p className="text-sm text-muted-foreground font-medium mb-2">SCB Technology Hub (KMUTT x SCB)</p>
             <p className="text-muted-foreground text-lg leading-relaxed mb-6 flex-grow">
-              Developing Python-based tools and Robot Framework scripts to validate banking systems within the KMUTT-SCB collaborative innovation space.
+              Built Python-based automation tools and Robot Framework scripts for validating banking systems, gaining hands-on experience in real enterprise QA workflows.
             </p>
             <div className="flex flex-wrap gap-2 mt-auto">
-              {["Python", "Robot Framework", "API"].map(t => (
+              {["Python", "Robot Framework", "API Testing", "Selenium"].map(t => (
                 <span key={t} className="text-xs font-semibold px-2 py-1 rounded-md bg-muted border border-border">{t}</span>
               ))}
             </div>
@@ -43,9 +44,9 @@ const HighlightsSection = () => {
               <Trophy size={28} />
             </div>
             <Badge variant="secondary" className="mb-4 uppercase text-[10px] tracking-widest px-2 py-0.5">Certification</Badge>
-            <h3 className="text-2xl font-bold mb-4">780 TOEIC Score</h3>
+            <h3 className="text-2xl font-bold mb-4">TOEIC 780 — Professional English</h3>
             <p className="text-muted-foreground text-lg leading-relaxed mb-6">
-              Demonstrated proficiency in professional English, enabling effective collaboration in international tech environments.
+              Able to read technical documentation, write clear and structured bug reports in English, and communicate effectively with cross-functional and international teams.
             </p>
             
             <Dialog>
@@ -79,22 +80,22 @@ const HighlightsSection = () => {
 
             <div className="flex items-center gap-2 mt-auto text-primary font-bold">
               <Languages size={18} />
-              <span>Professional English</span>
+              <span>English Communication</span>
             </div>
           </div>
 
-          {/* Card 3: Capstone Project */}
+          {/* Card 3: Hands-on Testing Experience */}
           <div className="bg-background rounded-2xl p-8 border border-border shadow-sm hover:shadow-md transition-all flex flex-col items-start h-full">
             <div className="size-14 rounded-2xl bg-primary/10 flex items-center justify-center text-primary mb-6">
               <Rocket size={28} />
             </div>
-            <Badge variant="default" className="mb-4 uppercase text-[10px] tracking-widest px-2 py-0.5">Academic Project</Badge>
-            <h3 className="text-2xl font-bold mb-4">Yakteaw AI Travel</h3>
+            <Badge variant="default" className="mb-4 uppercase text-[10px] tracking-widest px-2 py-0.5">Hands-on Experience</Badge>
+            <h3 className="text-2xl font-bold mb-4">Project-Based Testing</h3>
             <p className="text-muted-foreground text-lg leading-relaxed mb-6 flex-grow">
-              Leading QA &amp; DevOps for an AI platform, implementing full-suite manual and automated UI testing strategies.
+              Applied manual testing, automation (Robot Framework, Cypress), and API validation across real academic projects — including <span className="text-foreground font-semibold">Yakteaw Capstone</span> and <span className="text-foreground font-semibold">IT Bangmod Integrated Project</span>.
             </p>
             <div className="flex flex-wrap gap-2 mt-auto">
-              {["QA Lead", "PM", "DevOps"].map(t => (
+              {["Test Case Design", "Manual Testing", "Automation Testing"].map(t => (
                 <span key={t} className="text-xs font-semibold px-2 py-1 rounded-md bg-muted border border-border">{t}</span>
               ))}
             </div>

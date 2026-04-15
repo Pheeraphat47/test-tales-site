@@ -12,6 +12,18 @@ const experiences = [
     active: true,
   },
   {
+    period: "Jun 2025 — Aug 2025",
+    title: "Business Development Intern",
+    company: "Skooldio Company Limited",
+    description: "Driven growth through sales operations support and workflow automation.",
+    responsibilities: [
+      "Managed end-to-end sales for DevOps and automation testing workshops.",
+      "Automated internal workflows with n8n, reducing manual workload by 20%.",
+      "Delivered actionable growth insights via market and data analysis."
+    ],
+    active: false,
+  },
+  {
     period: "Jan 2025 — May 2025",
     title: "Product Owner Cooperative Intern",
     company: "Innovasive Company Limited",
